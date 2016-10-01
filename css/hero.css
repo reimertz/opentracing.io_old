@@ -1,0 +1,24 @@
+.hero {
+  margin-top: 0;
+  width: 100vw;
+  background: #70b7d5;
+  min-height: 80vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .hero__content {
+    max-width: 900px;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+  .hero__figure {
+    max-height: 400px; }
+  .hero__copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }

@@ -1,0 +1,32 @@
+@import 'variables';
+@import 'typography';
+
+@import 'vendor/_normalize.css';
+
+@import 'components/header';
+@import 'components/hero';
+
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

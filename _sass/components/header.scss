@@ -1,0 +1,66 @@
+@import '../variables';
+
+$header-height: 60px;
+
+header {
+  max-width: $max-width;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: $header-height;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 200ms;
+
+
+  &:before, &:after {
+    position: absolute;
+    height: $header-height;
+    width: 100%;
+    content: '';
+    display: block;
+    background: inherit;
+  }
+
+  &:before { left: -100%; }
+  &:after { right: -100%; }
+
+
+
+  &.has-scrolled {
+    background: rgba(white,0.9);
+    li {
+      color: $blue;
+    }
+  }
+
+  img {
+    max-height: $header-height;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+
+    ul {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 400px;
+    }
+
+    li {
+      display: inline-block;
+      color: white;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+  }
+}

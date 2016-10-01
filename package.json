@@ -1,0 +1,26 @@
+{
+  "name": "open-tracing",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css": "node-sass _sass/main.scss -o css",
+    "css:watch": "npm run css && node-sass _sass/main.scss -wo css",
+    "dev": "jekyll serve --config _config.yml & npm run css:watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reimertz/ixd.git"
+  },
+  "author": "Pierre Reimerz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prose/starter/issues"
+  },
+  "homepage": "https://github.com/prose/starter#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
