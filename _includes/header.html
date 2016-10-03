@@ -1,14 +1,27 @@
-<header>
-  <img src="img/logo.png">
-  <nav>
-    <ul>
-      <li><a href="#">Overview</a></li>
-      <li><a href="#">Docs</a></li>
-      <li><a href="#">Github</a></li>
-      <li><a href="#">Blog</a></li>
-    </ul>
-  </nav>
-  <script type="text/javascript" src="js/navbar.js"></script>
+<header class="header">
+  <div class="header__container">
+    <div class="header__logo">
+      <img src="img/logo.png">
+    </div>
+    <div class="header__actions">
+      <a href="#">Overview</a>
+      <a href="/documentation">Docs</a>
+      <div class="dropdown">
+        <a class="dropdown__button" href="https://github.com/opentracing">Github</a>
+        <div class="dropdown__content">
+          <a href="https://github.com/opentracing/opentracing-go">Go</a>
+          <a href="https://github.com/opentracing/opentracing-javascript">JavaScript</a>
+          <a href="https://github.com/opentracing/opentracing-java">Java</a>
+          <a href="https://github.com/opentracing/opentracing-python">Python</a>
+          <a href="https://github.com/opentracing/opentracing-objective-c">Objective-C</a>
+          <a href="https://github.com/opentracing/opentracing-csharp">C#</a>
+          <a href="https://github.com/opentracing/opentracing-cpp">C++</a>
+        </div>
+      </div>
+
+      <a href="https://medium.com/opentracing">Blog</a>
+    </div>
+  </div>
 </header>
 
 <!-- {% assign sortedPages = site.pages | sort:"order" %}

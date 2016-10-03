@@ -1,0 +1,24 @@
+{
+  "gitbook": ">=3.2.1",
+  "root": "_docs",
+  "title": "Opentracing",
+  "plugins": ["edit-link", "github", "livereload"],
+  "pluginsConfig": {
+   "fontSettings": {
+      "theme": "white"
+    },
+    "edit-link": {
+      "base": "https://github.com/opentracing/opentracing/tree/master",
+      "label": "Edit This Page"
+    },
+    "github": {
+      "url": "https://github.com/opentracing/opentracing.io/"
+    },
+    "theme-default": {
+      "showLevel": false,
+      "styles": {
+        "website": "build/gitbook.css"
+      }
+    }
+  }
+}

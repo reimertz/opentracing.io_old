@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:prepare": "gitbook install",
+    "docs:watch": "npm run docs:prepare && gitbook serve ./ documentation",
+    "docs:build": "npm run docs:prepare && rm -rf _book && gitbook build ./ documentation",
     "css": "node-sass _sass/main.scss -o css",
     "css:watch": "npm run css && node-sass _sass/main.scss -wo css",
     "dev": "jekyll serve --config _config.yml & npm run css:watch"
@@ -19,8 +21,8 @@
     "url": "https://github.com/prose/starter/issues"
   },
   "homepage": "https://github.com/prose/starter#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
+    "gitbook-cli": "^2.3.0"
   }
 }

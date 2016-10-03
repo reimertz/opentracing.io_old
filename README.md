@@ -1,21 +1,32 @@
-# ixd 2.0
 
-##  prerequisites
-you need to have [jekyll](https://jekyllrb.com/docs/installation) and [node](https://nodejs.org/en/) installed.
+OpenTracing.io
 
-## install node sass
 
+### Prerequisits
+
+you need to have node.js, npm, jekyll installed on your computer.
+
+### Install dependencies
 ```
-npm install node-sass -g
+npm install
 ```
 
-## run locally
+### run development
 ```
 npm run dev
+open http://localhost:3000 #
 ```
 
-deploy
+##Gitbook
+
+### run gitbook
 ```
-git push # :D :D
+npm run docs:watch
 ```
+
+### build documentation for static site (http://opentracing.io)
+```
+npm run docs:build
+```
+
 

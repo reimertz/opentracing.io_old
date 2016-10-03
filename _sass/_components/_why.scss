@@ -1,0 +1,66 @@
+@import '../variables';
+.why {
+  margin: 20vh auto 10vh auto;
+  width: 100vw;
+  max-width: $max-width;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  position: relative;
+  padding: 0 5vw;
+  min-height: 300px;
+  flex-wrap: wrap;
+  font-family: 'bariolthin';
+
+  &__section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-top: 20px;
+
+    &.why-tracing {
+      margin-top: 0px;
+      flex: 2;
+      text-align: center;
+      align-items: center;
+    }
+  }
+
+  &__figure {
+    flex: 1;
+    margin-right: 2rem;
+    max-width: 70px;
+  }
+
+  &__content {
+    flex: 3;
+    h2 {
+      color: $dark-blue;
+    }
+  }
+
+  @media (max-width: $medium) {
+    margin: 10vh auto;
+
+    .why-tracing {
+      order: 1;
+    }
+
+    &__section {
+      margin: 5vh auto;
+      min-width: 100%;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      order: 2;
+      flex: 1;
+    }
+
+    &__figure {
+      margin-right: 0;
+    }
+
+  }
+}

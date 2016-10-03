@@ -1,0 +1,142 @@
+@import '../variables';
+
+$footer-height: 80px;
+
+
+.footer {
+  background: $dark-purple;
+  position: relative;
+  width: 100%;
+  display: block;
+  z-index: 10;
+  flex: none;
+
+
+  &__container {
+    max-width: $max-width;
+    display: flex;
+    padding: 1.5rem;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  &__section {
+    &.documentation {
+      flex: 1;
+      width: 200px;
+    }
+
+    &.form {
+      flex: 2;
+      text-align: center;
+      width: 300px;
+    }
+
+    &.resources {
+      flex: 1;
+      width: 200px;
+    }
+
+    &.ecosystem {
+      flex: 1;
+      width: 200px;
+    }
+
+  }
+
+  &__subtitle {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    &:not(.no-line):after {
+      position: relative;
+      content:'';
+      display: block;
+      height: 1px;
+      margin: 15px 0;
+      width: 30%;
+      background: rgba(white, 0.5);
+    }
+  }
+
+  &__social_icons {
+    max-width: 200px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    img {
+      flex-grow: 1;
+      height: 20px;
+      max-height: 20px;
+      flex-direction: row;
+    }
+
+  }
+
+  &__actions {
+    color: white;
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    a {
+      letter-spacing: 1px;
+      padding: 5px 5px;
+    }
+  }
+
+  @media (max-width: $medium) {
+    &__container {
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__actions {
+      align-items: center;
+    }
+
+    &__subtitle {
+      margin-top: 20px;
+      width: 100%;
+      &:not(.no-line):after {
+        width: 100%;
+      }
+    }
+
+    .documentation {
+      order: 1;
+    }
+
+    .form {
+      order: 0;
+    }
+
+    .resources {
+      order: 2;
+    }
+
+    .ecosystem {
+      order: 3;
+    }
+  }
+
+  @media (min-width: $large) {
+    .documentation {
+      flex: 2;
+      width: 200px;
+    }
+
+    &__actions {
+      max-height: 150px;
+    }
+  }
+}
+
+
+
