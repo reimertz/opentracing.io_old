@@ -1,8 +1,3 @@
----
-layout: page
-title: Implementing the OpenTracing APIs
----
-
 ### Why OpenTracing?
 
 OpenTracing provides portable APIs for those adding instrumentation to their production systems.

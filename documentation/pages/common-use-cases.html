@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Common Use Cases · Opentracing</title>
+        <title>common use cases · Opentracing</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="best-practices.md" />
+    <link rel="next" href="concepts-and-terminology.html" />
     
     
-    <link rel="prev" href="data-conventions.html" />
+    <link rel="prev" href="authors-and-contributors.html" />
     
 
     </head>
@@ -102,12 +102,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="overview.html">
+        <li class="chapter " data-level="1.2" data-path="across-process-tracing.html">
             
-                <a href="overview.html">
+                <a href="across-process-tracing.html">
             
                     
-                    Overview
+                    across process tracing
             
                 </a>
             
@@ -115,12 +115,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="quick-start.html">
+        <li class="chapter " data-level="1.3" data-path="api-implementations.html">
             
-                <a href="quick-start.html">
+                <a href="api-implementations.html">
             
                     
-                    Quick Start
+                    api implementations
             
                 </a>
             
@@ -128,12 +128,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="language-support.md">
+        <li class="chapter " data-level="1.4" data-path="authors-and-contributors.html">
             
-                <span>
+                <a href="authors-and-contributors.html">
             
                     
-                    Language Support
+                    authors and contributors
             
                 </a>
             
@@ -141,25 +141,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="data-conventions.html">
-            
-                <a href="data-conventions.html">
-            
-                    
-                    Data Conventions
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="1.6" data-path="common-use-cases.html">
+        <li class="chapter active" data-level="1.5" data-path="common-use-cases.html">
             
                 <a href="common-use-cases.html">
             
                     
-                    Common Use Cases
+                    common use cases
             
                 </a>
             
@@ -167,12 +154,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="best-practices.md">
+        <li class="chapter " data-level="1.6" data-path="concepts-and-terminology.html">
             
-                <span>
+                <a href="concepts-and-terminology.html">
             
                     
-                    Best Practices
+                    concepts and terminology
             
                 </a>
             
@@ -180,12 +167,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="cross-process.md">
+        <li class="chapter " data-level="1.7" data-path="data-conventions.html">
             
-                <span>
+                <a href="data-conventions.html">
             
                     
-                    Cross Process (Inject/Extract)
+                    data conventions
             
                 </a>
             
@@ -193,12 +180,64 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="framework-implementation-guide.md">
+        <li class="chapter " data-level="1.8" data-path="implementing-OpenTracing.html">
+            
+                <a href="implementing-OpenTracing.html">
+            
+                    
+                    implementing OpenTracing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="instrumenting-frameworks.html">
+            
+                <a href="instrumenting-frameworks.html">
+            
+                    
+                    instrumenting frameworks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="instrumenting-large-systems.html">
+            
+                <a href="instrumenting-large-systems.html">
+            
+                    
+                    instrumenting large systems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="ck-start.md">
             
                 <span>
             
                     
-                    Framework Implementation Guide
+                    ck start
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="supported-tracer.html">
+            
+                <a href="supported-tracer.html">
+            
+                    
+                    supported tracer
             
                 </a>
             
@@ -236,7 +275,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Common Use Cases</a>
+        <a href=".." >common use cases</a>
     </h1>
 </div>
 
@@ -251,8 +290,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="toc"></div>
-
+                                <h1 id="commom-use-cases">Commom use cases</h1>
 <p>This page aims to illustrate common use cases that developers who instrument their applications and libraries with OpenTracing API need to deal with.</p>
 <h2 id="stepping-back-who-is-opentracing-for">Stepping Back: Who is OpenTracing for?</h2>
 <p>OpenTracing is a thin standardization layer that sits between application/library code and various systems that consume tracing and causality data. Here is a diagram:</p>
@@ -465,12 +503,12 @@ explicit_span.finish(
 
             
                 
-                <a href="data-conventions.html" class="navigation navigation-prev " aria-label="Previous page: Data Conventions">
+                <a href="authors-and-contributors.html" class="navigation navigation-prev " aria-label="Previous page: authors and contributors">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="best-practices.md" class="navigation navigation-next " aria-label="Next page: Best Practices">
+                <a href="concepts-and-terminology.html" class="navigation navigation-next " aria-label="Next page: concepts and terminology">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -481,7 +519,7 @@ explicit_span.finish(
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"layout":"page","title":"Common Use Cases","level":"1.6","depth":1,"next":{"title":"Best Practices","level":"1.7","depth":1,"path":"pages/best-practices.md","ref":"pages/best-practices.md","articles":[]},"previous":{"title":"Data Conventions","level":"1.5","depth":1,"path":"pages/data-conventions.md","ref":"pages/data-conventions.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","github","livereload","livereload"],"root":"_docs","styles":{"website":"build/gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/opentracing/opentracing.io/"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white"},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/opentracing/opentracing/tree/master"},"theme-default":{"styles":{"website":"build/gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Opentracing","gitbook":">=3.2.1"},"file":{"path":"pages/common-use-cases.md","mtime":"2016-10-04T20:53:35.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-04T20:53:43.783Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"common use cases","level":"1.5","depth":1,"next":{"title":"concepts and terminology","level":"1.6","depth":1,"path":"pages/concepts-and-terminology.md","ref":"pages/concepts-and-terminology.md","articles":[]},"previous":{"title":"authors and contributors","level":"1.4","depth":1,"path":"pages/authors-and-contributors.md","ref":"pages/authors-and-contributors.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","github","livereload","livereload"],"root":"_docs","styles":{"website":"build/gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/opentracing/opentracing.io/"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white"},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/opentracing/opentracing/tree/master"},"theme-default":{"styles":{"website":"build/gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Opentracing","gitbook":">=3.2.1"},"file":{"path":"pages/common-use-cases.md","mtime":"2016-10-04T21:04:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-04T21:14:03.759Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

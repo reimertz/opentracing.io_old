@@ -1,8 +1,4 @@
----
-layout: page
-title: Data Conventions
----
-<div id="toc"></div>
+# Data Conventions
 
 ## Introduction
 

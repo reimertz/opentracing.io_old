@@ -1,7 +1,4 @@
----
-layout: page
-title: Authors and Contributors
----
+# Authors and Contributors
 
 (in alphabetical order)
 

@@ -1,11 +1,6 @@
----
-layout: page
-title: How to Instrument Systems at Scale
----
+# How to Instrument Systems at Scale
+
 _Before getting onto recommendations on how to instrument your large-scale system with OpenTracing, be sure to read the [Specification overview](/spec)._
-
-<div id="toc"></div>
-
 
 ## Spans and Relationships
 

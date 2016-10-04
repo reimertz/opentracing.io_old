@@ -1,7 +1,4 @@
----
-layout: page
-title: Everything You Wanted to Know About Inject and Extract but were Afraid to Ask
----
+# Everything You Wanted to Know About Inject and Extract but were Afraid to Ask
 
 Programmers adding tracing support across process boundaries must understand the `Tracer.Inject(...)` and `Tracer.Extract(...)` capabilities of [the OpenTracing specification](/spec). They are conceptually powerful, allowing the programmer to write *correct* and *general* cross-process propagation code **without being bound to a particular OpenTracing implementation**; that said, with great power comes great opportunity for confusion. :)
 
@@ -17,7 +14,7 @@ Let's briefly restate the "Why OpenTracing?" section of the [OpenTracing landing
 
 > By offering consistent, expressive, vendor-neutral APIs for popular platforms, OpenTracing makes it easy for developers to add (or switch) tracing implementations with an O(1) configuration change. OpenTracing also offers a lingua franca for OSS instrumentation and platform-specific tracing helper libraries.
 
-**Together, `Inject` and `Extract` allow for inter-process trace propagation without tightly coupling the programmer to a particular OpenTracing implementation.** 
+**Together, `Inject` and `Extract` allow for inter-process trace propagation without tightly coupling the programmer to a particular OpenTracing implementation.**
 
 ## Requirements for the OpenTracing propagation scheme
 
@@ -35,7 +32,7 @@ Similarly, given a Carrier, an injected trace may be **Extracted**, yielding a S
 
 #### Inject pseudocode example
 
-{% highlight python %}
+```python
 span_context = ...
 outbound_request = ...
 
@@ -49,11 +46,11 @@ tracer.inject(span_context, opentracing.Format.TEXT_MAP, carrier)
 # along over whatever wire protocol we already use.
 for key, value in carrier:
     outbound_request.headers[key] = escape(value)
-{% endhighlight %}
+```
 
 #### Extract pseudocode example
 
-{% highlight python %}
+```python
 inbound_request = ...
 
 # We'll again use the (builtin) TEXT_MAP carrier format. Per the
@@ -69,7 +66,7 @@ span_context = tracer.extract(opentracing.Format.TEXT_MAP, carrier)
 span = tracer.start_span("...", child_of=span_context)
 
 # (If `carrier` held trace data, `span` will now be ready to use.)
-{% endhighlight %}
+```
 
 #### Carriers have formats
 
@@ -98,7 +95,7 @@ Any propagation subsystem (an RPC library, a message queue, etc) may choose to i
 
 Some pseudocode will make this less abstract. Imagine that we're the author of the (sadly fictitious) **ArrrPC pirate RPC subsystem**, and we want to add OpenTracing support to our outbound RPC requests. Minus some error handling, our pseudocode might look like this:
 
-{% highlight python %}
+```python
 span_context = ...
 outbound_request = ...
 
@@ -119,7 +116,7 @@ except opentracing.UnsupportedFormatException:
     # pass along over whatever wire protocol we already use.
     for key, value in carrier:
 	outbound_request.headers[key] = escape(value)
-{% endhighlight %}
+```
 
 <div id="format-identifiers"></div>
 

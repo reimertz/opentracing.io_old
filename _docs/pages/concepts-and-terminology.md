@@ -1,9 +1,3 @@
----
-layout: page
-title: Semantic Specification
----
-<div id="toc"></div>
-
 # Concepts and Terminology
 
 

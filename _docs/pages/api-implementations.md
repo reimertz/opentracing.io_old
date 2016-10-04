@@ -1,8 +1,3 @@
----
-layout: page
-title: API Implementations
----
-
 # Integration APIs
 
 OpenTracing APIs are **available** for the following platforms:

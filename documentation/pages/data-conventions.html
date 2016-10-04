@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Data Conventions · Opentracing</title>
+        <title>data conventions · Opentracing</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="common-use-cases.html" />
+    <link rel="next" href="implementing-OpenTracing.html" />
     
     
-    <link rel="prev" href="language-support.md" />
+    <link rel="prev" href="concepts-and-terminology.html" />
     
 
     </head>
@@ -102,12 +102,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="overview.html">
+        <li class="chapter " data-level="1.2" data-path="across-process-tracing.html">
             
-                <a href="overview.html">
+                <a href="across-process-tracing.html">
             
                     
-                    Overview
+                    across process tracing
             
                 </a>
             
@@ -115,12 +115,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="quick-start.html">
+        <li class="chapter " data-level="1.3" data-path="api-implementations.html">
             
-                <a href="quick-start.html">
+                <a href="api-implementations.html">
             
                     
-                    Quick Start
+                    api implementations
             
                 </a>
             
@@ -128,12 +128,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="language-support.md">
+        <li class="chapter " data-level="1.4" data-path="authors-and-contributors.html">
             
-                <span>
+                <a href="authors-and-contributors.html">
             
                     
-                    Language Support
+                    authors and contributors
             
                 </a>
             
@@ -141,25 +141,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5" data-path="data-conventions.html">
-            
-                <a href="data-conventions.html">
-            
-                    
-                    Data Conventions
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.6" data-path="common-use-cases.html">
+        <li class="chapter " data-level="1.5" data-path="common-use-cases.html">
             
                 <a href="common-use-cases.html">
             
                     
-                    Common Use Cases
+                    common use cases
             
                 </a>
             
@@ -167,12 +154,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="best-practices.md">
+        <li class="chapter " data-level="1.6" data-path="concepts-and-terminology.html">
             
-                <span>
+                <a href="concepts-and-terminology.html">
             
                     
-                    Best Practices
+                    concepts and terminology
             
                 </a>
             
@@ -180,12 +167,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="cross-process.md">
+        <li class="chapter active" data-level="1.7" data-path="data-conventions.html">
             
-                <span>
+                <a href="data-conventions.html">
             
                     
-                    Cross Process (Inject/Extract)
+                    data conventions
             
                 </a>
             
@@ -193,12 +180,64 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="framework-implementation-guide.md">
+        <li class="chapter " data-level="1.8" data-path="implementing-OpenTracing.html">
+            
+                <a href="implementing-OpenTracing.html">
+            
+                    
+                    implementing OpenTracing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="instrumenting-frameworks.html">
+            
+                <a href="instrumenting-frameworks.html">
+            
+                    
+                    instrumenting frameworks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="instrumenting-large-systems.html">
+            
+                <a href="instrumenting-large-systems.html">
+            
+                    
+                    instrumenting large systems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="ck-start.md">
             
                 <span>
             
                     
-                    Framework Implementation Guide
+                    ck start
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="supported-tracer.html">
+            
+                <a href="supported-tracer.html">
+            
+                    
+                    supported tracer
             
                 </a>
             
@@ -236,7 +275,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Data Conventions</a>
+        <a href=".." >data conventions</a>
     </h1>
 </div>
 
@@ -251,8 +290,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="toc"></div>
-
+                                <h1 id="data-conventions">Data Conventions</h1>
 <h2 id="introduction">Introduction</h2>
 <p>OpenTracing defines an API through which application instrumentation can log data to a pluggable tracer. In general, there is no guarantee made by OpenTracing about the way that data will be handled by an underlying tracer. So what type of data should be provided to the APIs in order to best ensure compatibility across tracer implementations?</p>
 <p>A high-level understanding between the instrumentor and tracer developers adds great value: if certain known tag key/values are used for common application scenarios, tracers can choose to pay special attention to them. The same is true of <code>log</code>ged events, and span structure in general.</p>
@@ -393,12 +431,12 @@
 
             
                 
-                <a href="language-support.md" class="navigation navigation-prev " aria-label="Previous page: Language Support">
+                <a href="concepts-and-terminology.html" class="navigation navigation-prev " aria-label="Previous page: concepts and terminology">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="common-use-cases.html" class="navigation navigation-next " aria-label="Next page: Common Use Cases">
+                <a href="implementing-OpenTracing.html" class="navigation navigation-next " aria-label="Next page: implementing OpenTracing">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -409,7 +447,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"layout":"page","title":"Data Conventions","level":"1.5","depth":1,"next":{"title":"Common Use Cases","level":"1.6","depth":1,"path":"pages/common-use-cases.md","ref":"pages/common-use-cases.md","articles":[]},"previous":{"title":"Language Support","level":"1.4","depth":1,"path":"pages/language-support.md","ref":"pages/language-support.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","github","livereload","livereload"],"root":"_docs","styles":{"website":"build/gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/opentracing/opentracing.io/"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white"},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/opentracing/opentracing/tree/master"},"theme-default":{"styles":{"website":"build/gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Opentracing","gitbook":">=3.2.1"},"file":{"path":"pages/data-conventions.md","mtime":"2016-10-04T20:49:01.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-04T20:53:43.783Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"data conventions","level":"1.7","depth":1,"next":{"title":"implementing OpenTracing","level":"1.8","depth":1,"path":"pages/implementing-OpenTracing.md","ref":"pages/implementing-OpenTracing.md","articles":[]},"previous":{"title":"concepts and terminology","level":"1.6","depth":1,"path":"pages/concepts-and-terminology.md","ref":"pages/concepts-and-terminology.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","github","livereload","livereload"],"root":"_docs","styles":{"website":"build/gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/opentracing/opentracing.io/"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white"},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/opentracing/opentracing/tree/master"},"theme-default":{"styles":{"website":"build/gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Opentracing","gitbook":">=3.2.1"},"file":{"path":"pages/data-conventions.md","mtime":"2016-10-04T21:04:59.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-04T21:14:03.759Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

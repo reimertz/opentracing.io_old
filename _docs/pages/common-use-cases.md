@@ -1,8 +1,4 @@
----
-layout: page
-title: Instrumentation for Common Use Cases
----
-<div id="toc"></div>
+# Commom use cases
 
 This page aims to illustrate common use cases that developers who instrument their applications and libraries with OpenTracing API need to deal with.
 

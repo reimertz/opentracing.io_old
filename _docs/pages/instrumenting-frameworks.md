@@ -1,11 +1,6 @@
----
-layout: page
-title: OpenTracing RPC/IPC Framework Implementation Guide
----
+# Instrumenting Frameworks
 
 *Trace all the things!*
-
-<div id="toc"></div>
 
 ## Audience
 
@@ -50,7 +45,7 @@ Some users may want to trace every request while other may want only specific re
 
 ### Tracing Request Properties
 
-Users may also want to track information about the requests without having to manually access the span and set the tags themselves. It's helpful to provide a way for users to specify properties of the request they want to trace, and then automatically trace these features. Ideally, this would be similar to the Span Decorator function in gRPC: 
+Users may also want to track information about the requests without having to manually access the span and set the tags themselves. It's helpful to provide a way for users to specify properties of the request they want to trace, and then automatically trace these features. Ideally, this would be similar to the Span Decorator function in gRPC:
 
 ```
 // SpanDecorator binds a function that decorates gRPC Spans.
