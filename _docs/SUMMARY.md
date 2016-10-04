@@ -1,3 +1,4 @@
+* [quick start](pages/quick-start.md)
 * [across process tracing](pages/across-process-tracing.md)
 * [api implementations](pages/api-implementations.md)
 * [authors and contributors](pages/authors-and-contributors.md)
@@ -7,5 +8,4 @@
 * [implementing OpenTracing](pages/implementing-OpenTracing.md)
 * [instrumenting frameworks](pages/instrumenting-frameworks.md)
 * [instrumenting large systems](pages/instrumenting-large-systems.md)
-* [ck start](pages/ck-start.md)
 * [supported tracer](pages/supported-tracer.md)
