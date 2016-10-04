@@ -1,0 +1,54 @@
+@import '../variables';
+
+.window {
+  margin: 1.5rem;
+  background: $blue-black;
+  border: 1px solid lighten($blue-black, 10);
+  border-radius: 7px;
+  min-height: 275px;
+  min-width: 350px;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 1px 1px 20px 0px rgba(black, 0.3);
+  font-family: monospace;
+
+  &__header {
+    padding: 7px;
+
+    &__button__red, &__button__orange, &__button__green {
+      float: left;
+      width: 0.8rem;
+      height: 0.8rem;
+      margin-right: 8px;
+      background: red;
+      border-radius: 0.8rem;
+    }
+
+    &__button__red    { background: red; }
+    &__button__orange { background: orange; }
+    &__button__green  { background: green; }
+
+    &__title {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__content {
+
+    padding: 1.5rem;
+    pre {
+    line-height: 1.3rem;
+    /* font-family: monospace; */
+    font-size: 0.8rem;
+    white-space: pre-wrap;
+    font-weight: 600;
+    font-family: 'bariolthin';
+    }
+  }
+
+  @media (max-width: $small) { }
+  @media (max-width: $medium) { }
+
+}
