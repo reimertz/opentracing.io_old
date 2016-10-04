@@ -5,6 +5,6 @@ kramdown:
   hard_wrap: false
 highlighter: rouge
 url: 'http://localhost:4000'
-docs: 'http://localhost:3000'
-exclude:
-  - docs
+collections:
+  - documentation
+exclude: ['node_modules']

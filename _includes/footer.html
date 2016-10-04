@@ -3,26 +3,26 @@
     <div class="footer__section documentation">
       <h4 class="footer__subtitle">Documentation</h4>
       <div class="footer__actions">
-        <a href="documentation/pages/overview">Overview</a>
-        <a href="documentation/pages/quick-start">Quick Start</a>
-        <a href="documentation/pages/languange-support">Languange Support</a>
-        <a href="documentation/pages/data-conventions">Data Conventions</a>
-        <a href="documentation/pages/common-use-cases">Common Use Cases</a>
-        <a href="documentation/pages/best-practices">Best Practices</a>
-        <a href="documentation/pages/cross-process">Cross Process (Inject/Extract)</a>
-        <a href="documentation/pages/framework-implementation-guide">Framework Implementation Guide</a>
+        <!-- yep, I had to do this to make documentation links non-static. jekyll 4.0 will solve this -->
+        {% for file in site.static_files %}
+          {% if file.extname == '.html' %}
+            {% if file.path contains '/documentation/pages/' %}
+              {% assign url = file.path %}
+              {% assign name = file.path | remove: file.extname | remove: '/documentation/pages/' | replace: '-', ' ' %}
+                <a href="{{url}}">{{name}}</a>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
-
 
     <div class="footer__section form">
       <h4 class="footer__subtitle no-line">Connect with OpenTracing</h4>
 
       <div class="footer__social_icons">
-        <a href="#"><img src="//simpleicons.org/icons/twitter.svg" alt=""></a>
-        <a href="#"><img src="//simpleicons.org/icons/github.svg" alt=""></a>
-        <a href="#"><img src="//simpleicons.org/icons/medium.svg" alt=""></a>
-        <a href="#"><img src="//simpleicons.org/icons/gitter.svg" alt=""></a>
+        {% for social in site.data.social.array %}
+          <a href="{{social.url}}"><img src="{{social.icon}}" alt=""></a>
+        {% endfor %}
       </div>
     </div>
 
@@ -42,10 +42,9 @@
         <a href="/frameworks">Frameworks</a>
         <a href="/companies">Companies</a>
         <a href="/tracers">Tracers</a>
-        <a href="https://medium.com/opentracing">Medium</a>
-        <a href="https://github.com/opentracing">Github</a>
-        <a href="https://twitter.com/opentracing">Twitter</a>
-        <a href="https://gitter.im/orgs/opentracing/rooms">Gitter</a>
+        {% for social in site.data.social.array %}
+          <a href="{{social.url}}">{{social.name}}</a>
+        {% endfor %}
       </div>
     </div>
 

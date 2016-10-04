@@ -596,7 +596,8 @@ img {
     flex-wrap: wrap; }
     .footer__actions a {
       letter-spacing: 1px;
-      padding: 5px 5px; }
+      padding: 5px 5px;
+      text-transform: capitalize; }
   @media (max-width: 768px) {
     .footer__container {
       align-items: center;
@@ -794,6 +795,9 @@ img {
       text-decoration: none;
       font-size: 1rem;
       justify-content: center; }
+      .companies__logos a img {
+        opacity: 0.5;
+        max-height: 50px; }
   @media (max-width: 768px) {
     .companies__logos {
       width: 100%; }

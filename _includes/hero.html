@@ -8,13 +8,9 @@
       <div class="line"></div>
       <h2 class="dark-blue">Libraries available in 6 languanges</h2>
       <p class="dark-blue">
-        <a href="https://github.com/opentracing/opentracing-go">Go</a>,
-        <a href="https://github.com/opentracing/opentracing-javascript">JavaScript</a>,
-        <a href="https://github.com/opentracing/opentracing-java">Java</a>,
-        <a href="https://github.com/opentracing/opentracing-python">Python</a>,
-        <a href="https://github.com/opentracing/opentracing-objective-c">Objective-C</a>,
-        <a href="https://github.com/opentracing/opentracing-csharp">C#</a>,
-        <a href="https://github.com/opentracing/opentracing-cpp">C++</a>
+      {% for language in site.data.language.array %}
+        <a href="{{languange.url}}">{{ language.name }}</a>{% if forloop.last == false %},{% endif %}
+      {% endfor %}
       </p>
     </section>
   </div>
@@ -22,17 +18,15 @@
     <div class="logo-bar__content">
       <!-- <p>Supported tracers</p> -->
       <div class="logo-bar__logos">
-        <a href="#">Zipkin</a>
-        <a href="#">Lightstep</a>
-        <a href="#">APPDASH</a>
-        <a href="#">TRACER</a>
+        {% for tracer in site.data.tracers.array %}
+          <a href="{{languange.url}}">{{ tracer.name }}</a>
+        {% endfor %}
       </div>
       <!-- <p>Compatible frameworks</p> -->
       <div class="logo-bar__logos">
-        <a href="#">GRPC</a>
-        <a href="#">Fnagle</a>
-        <a href="#">Flask</a>
-        <a href="#">Django</a>
+        {% for framework in site.data.frameworks.array %}
+          <a href="{{languange.url}}">{{ framework.name }}</a>
+        {% endfor %}
       </div>
     </div>
   </section>

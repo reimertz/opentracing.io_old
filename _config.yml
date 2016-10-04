@@ -5,6 +5,4 @@ kramdown:
   hard_wrap: false
 highlighter: rouge
 url: '//opentracing.io'
-docs: '//opentracing.io'
-exclude:
-  - docs
+exclude: ['node_modules']

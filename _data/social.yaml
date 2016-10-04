@@ -1,0 +1,16 @@
+category: Social Accounts
+array:
+  - name: Medium
+    url:  //medium.com/opentracing
+    icon: https://simpleicons.org/icons/medium.svg
+  - name: Github
+    url:  //github.com/opentracing
+    icon: https://simpleicons.org/icons/github.svg
+  - name: Twitter
+    url:  //twitter.com/opentracing
+    icon: https://simpleicons.org/icons/twitter.svg
+  - name: Gitter
+    url:  //gitter.im/orgs/opentracing/rooms
+    icon: https://simpleicons.org/icons/gitter.svg
+
+

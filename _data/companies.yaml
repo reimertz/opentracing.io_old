@@ -1,0 +1,17 @@
+category: Companies
+array:
+  - name: Apple
+    url: http://apple.com
+    icon: 'https://simpleicons.org/icons/apple.svg'
+
+  - name: Microsoft
+    url: http://microsoft.com
+    icon: 'https://simpleicons.org/icons/microsoft.svg'
+
+  - name: Uber
+    url: http://uber.com
+    icon: 'https://simpleicons.org/icons/uber.svg'
+
+  - name: Google
+    url: http://google.com
+    icon: 'https://simpleicons.org/icons/google.svg'
