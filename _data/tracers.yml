@@ -2,15 +2,15 @@ category: Tracers
 array:
   - name: Zipkin
     url: http://zipkin.com
-    icon: ''
+    icon: 'https://github.com/openzipkin/openzipkin.github.io/blob/master/public/img/zipkin-logo-200x119.jpg'
 
   - name: Lightstep
     url: http://lightstep.com
-    icon: ''
+    icon: 'https://github.com/lightstep/lightstep.github.io/blob/master/images/lightstep/lightstep-logo-slack-cropped-128x128.png '
 
   - name: AppDash
     url: http://appdash.com
-    icon: ''
+    icon: 'https://github.com/sourcegraph/appdash-data/blob/master/data/logo_red.png'
 
   - name: Tracer
     url: http://tracer.com
