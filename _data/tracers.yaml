@@ -2,7 +2,7 @@ category: Tracers
 array:
   - name: Zipkin
     url: http://zipkin.com
-    icon: https://raw.githubusercontent.com/openzipkin/openzipkin.github.io/master/public/img/zipkin-logo-200x119.jpg
+    icon: img/tracers/zipkin.png
 
   - name: Lightstep
     url: http://lightstep.com

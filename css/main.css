@@ -733,7 +733,7 @@ img {
     margin: 0 auto;
     flex-wrap: wrap; }
   .logo-bar__logos {
-    min-width: 200px;
+    min-width: 300px;
     max-width: 400px;
     display: flex;
     flex: 1;
@@ -752,8 +752,7 @@ img {
       font-size: 1rem;
       justify-content: center; }
       .logo-bar__logos a img {
-        max-height: 50px;
-        width: auto; }
+        max-height: 20px; }
   @media (max-width: 768px) {
     .logo-bar__logos {
       width: 100%;
