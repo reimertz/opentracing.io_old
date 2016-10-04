@@ -4,14 +4,18 @@ array:
     url: http://apple.com
     icon: 'https://simpleicons.org/icons/apple.svg'
 
-  - name: Microsoft
-    url: http://microsoft.com
-    icon: 'https://simpleicons.org/icons/microsoft.svg'
+  - name: Yelp
+    url: http://yelp.com
+    icon: 'https://commons.wikimedia.org/wiki/File:Yelp_Logo.svg'
 
-  - name: Uber
-    url: http://uber.com
-    icon: 'https://simpleicons.org/icons/uber.svg'
+  - name: Workiva
+    url: http://workiva.com
+    icon: 'https://en.wikipedia.org/wiki/Workiva#/media/File:Workiva-Logo-Digital_and_Web.png'
 
-  - name: Google
-    url: http://google.com
-    icon: 'https://simpleicons.org/icons/google.svg'
+  - name: Joyent
+    url: https://www.joyent.com
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/9/96/Joyent-logo.png'
+    
+  - name: Cockroach Labs 
+    url: https://www.cockroachlabs.com
+    icon: 'https://github.com/grpc/grpc.github.io/blob/master/img/cockroach-1.png'
