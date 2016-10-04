@@ -128,9 +128,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="language-support.html">
+        <li class="chapter " data-level="1.4" data-path="language-support.md">
             
-                <a href="language-support.html">
+                <span>
             
                     
                     Language Support
@@ -167,9 +167,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="best-practices.html">
+        <li class="chapter " data-level="1.7" data-path="best-practices.md">
             
-                <a href="best-practices.html">
+                <span>
             
                     
                     Best Practices
@@ -180,9 +180,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="cross-process.html">
+        <li class="chapter " data-level="1.8" data-path="cross-process.md">
             
-                <a href="cross-process.html">
+                <span>
             
                     
                     Cross Process (Inject/Extract)
@@ -193,9 +193,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="framework-implementation-guide.html">
+        <li class="chapter " data-level="1.9" data-path="framework-implementation-guide.md">
             
-                <a href="framework-implementation-guide.html">
+                <span>
             
                     
                     Framework Implementation Guide
@@ -251,16 +251,23 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="overview">Overview</h2>
-<p>This is some dummy data just to show how easy it is.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">import</span> { Opentracing } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;opentracing&apos;</span>
-<span class="hljs-keyword">let</span> tracing = <span class="hljs-keyword">new</span> Opentracing(<span class="hljs-built_in">window</span>)
-</code></pre>
-<p>this is a list</p>
+                                <h1 id="the-opentracing-project">The OpenTracing Project</h1>
+<p class="lead"></p>
+
+<h2 id="why-tracing">Why Tracing?</h2>
+<p>Developers and engineering organizations are trading in old, monolithic systems for modern microservice architectures, and they do so for numerous compelling reasons: system components scale independently, dev teams stay small and agile, deployments are continuous and decoupled, and so on.</p>
+<p>That said, <strong>once a production system contends with real concurrency or splits into many services, crucial (and formerly easy) tasks become difficult</strong>: user-facing latency optimization, root-cause analysis of backend errors, communication about distinct pieces of a now-distributed system, etc.</p>
+<p>Contemporary distributed tracing systems (e.g., Zipkin, Dapper, HTrace, X-Trace, among others) aim to address these issues, but they do so via application-level instrumentation using incompatible APIs. Developers are uneasy about tightly coupling their polyglot systems to any particular distributed tracing implementation, yet the application-level instrumentation APIs for these many distinct tracing systems have remarkably similar semantics.</p>
+<h2 id="why-opentracing">Why OpenTracing?</h2>
+<p>Enter <strong>OpenTracing</strong>: by offering consistent, expressive, vendor-neutral APIs for popular platforms, OpenTracing makes it easy for developers to add (or switch) tracing implementations with an <code>O(1)</code> configuration change. OpenTracing also offers a lingua franca for OSS instrumentation and platform-specific tracing helper libraries.  Please refer to the <a href="spec">Semantic Specification</a>.</p>
+<h3 id="language-support">Language Support</h3>
+<p>The OpenTracing project aims to provide APIs for all popular platforms. The APIs have standard semantic capabilities and must not be tightly coupled to any particular downstream tracing or monitoring system. Initial target languages are Go, Python, Java, and Javascript, with more to follow.</p>
+<p>Please refer to the <a href="integration">Per-Platform APIs</a> page for the list of currently supported platforms.</p>
+<h2 id="support-or-contact">Support or Contact</h2>
 <ul>
-<li>a</li>
-<li>epic</li>
-<li>list</li>
+<li>Open an issue against <a href="https://github.com/opentracing" target="_blank">one of the repositories</a>, or</li>
+<li>Start a discussion in the <a href="https://groups.google.com/forum/#!forum/distributed-tracing" target="_blank">Distributed Tracing</a> Google group, or</li>
+<li>Ask a question in the chat room <a href="https://gitter.im/opentracing/public" target="_blank">https://gitter.im/opentracing/public</a></li>
 </ul>
 
                                 
@@ -305,7 +312,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Overview","level":"1.2","depth":1,"next":{"title":"Quick Start","level":"1.3","depth":1,"path":"pages/quick-start.md","ref":"pages/quick-start.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.MD","ref":"README.MD","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","github","livereload","livereload"],"root":"_docs","styles":{"website":"build/gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/opentracing/opentracing.io/"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white"},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/opentracing/opentracing/tree/master"},"theme-default":{"styles":{"website":"build/gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Opentracing","gitbook":">=3.2.1"},"file":{"path":"pages/overview.md","mtime":"2016-10-03T21:35:16.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-04T13:18:49.065Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"layout":"page","title":"Overview","level":"1.2","depth":1,"next":{"title":"Quick Start","level":"1.3","depth":1,"path":"pages/quick-start.md","ref":"pages/quick-start.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.MD","ref":"README.MD","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","github","livereload","livereload"],"root":"_docs","styles":{"website":"build/gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/opentracing/opentracing.io/"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white"},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/opentracing/opentracing/tree/master"},"theme-default":{"styles":{"website":"build/gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Opentracing","gitbook":">=3.2.1"},"file":{"path":"pages/overview.md","mtime":"2016-10-04T20:48:06.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-04T20:53:43.783Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
