@@ -1,8 +1,5 @@
 @import '../variables';
 
-$footer-height: 80px;
-
-
 .footer {
   background: $dark-purple;
   position: relative;
@@ -10,7 +7,6 @@ $footer-height: 80px;
   display: block;
   z-index: 10;
   flex: none;
-
 
   &__container {
     max-width: $max-width;
@@ -138,6 +134,3 @@ $footer-height: 80px;
     }
   }
 }
-
-
-

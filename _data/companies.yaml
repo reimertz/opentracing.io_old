@@ -2,20 +2,20 @@ category: Companies
 array:
   - name: Apple
     url: http://apple.com
-    icon: 'https://simpleicons.org/icons/apple.svg'
+    icon: https://simpleicons.org/icons/apple.svg
 
   - name: Yelp
     url: http://yelp.com
-    icon: 'https://commons.wikimedia.org/wiki/File:Yelp_Logo.svg'
+    icon: https://upload.wikimedia.org/wikipedia/commons/a/ad/Yelp_Logo.svg
 
   - name: Workiva
     url: http://workiva.com
-    icon: 'https://en.wikipedia.org/wiki/Workiva#/media/File:Workiva-Logo-Digital_and_Web.png'
+    icon: https://upload.wikimedia.org/wikipedia/commons/1/19/Workiva-Logo-Digital_and_Web.png
 
   - name: Joyent
     url: https://www.joyent.com
-    icon: 'https://upload.wikimedia.org/wikipedia/commons/9/96/Joyent-logo.png'
-    
-  - name: Cockroach Labs 
+    icon: https://upload.wikimedia.org/wikipedia/commons/9/96/Joyent-logo.png
+
+  - name: Cockroach Labs
     url: https://www.cockroachlabs.com
-    icon: 'https://github.com/grpc/grpc.github.io/blob/master/img/cockroach-1.png'
+    icon: https://raw.githubusercontent.com/grpc/grpc.github.io/master/img/cockroach-1.png

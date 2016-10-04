@@ -19,15 +19,28 @@
       <!-- <p>Supported tracers</p> -->
       <div class="logo-bar__logos">
         {% for tracer in site.data.tracers.array %}
-          <a href="{{languange.url}}">{{ tracer.name }}</a>
+            <a href="{{tracer.url}}">
+              {% if tracer.icon %}
+                <img src="{{ tracer.icon }}" alt="{{ tracer.name }} logo">
+              {% else %}
+                {{ tracer.name }}
+              {% endif %}
+            </a>
         {% endfor %}
       </div>
       <!-- <p>Compatible frameworks</p> -->
       <div class="logo-bar__logos">
         {% for framework in site.data.frameworks.array %}
-          <a href="{{languange.url}}">{{ framework.name }}</a>
+          <a href="{{framework.url}}">
+            {% if framework.icon %}
+              <img src="{{ framework.icon }}" alt="{{ framework.name }} logo">
+            {% else %}
+              {{ framework.name }}
+            {% endif %}
+          </a>
         {% endfor %}
       </div>
     </div>
   </section>
 </section>
+
