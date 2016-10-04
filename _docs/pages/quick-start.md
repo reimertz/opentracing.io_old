@@ -14,13 +14,15 @@ As I mentioned, OpenTracing steps in to make it very easy for you to trace becau
 
 You can follow my entire process below — from building the web app to seeing the traces in [AppDash](https://github.com/sourcegraph/appdash), the open source distributed tracing system I chose. Alternatively, you can skip ahead and see the finished result with Appdash. To do that, run
 
+```
 docker run --rm -ti -p 8080:8080 -p 8700:8700 bg451/opentracing-example
+```
 
 This will spin up the test server and a local Appdash instance. The source code can be found at [here](https://github.com/bg451/opentracing-example).
 
 For those who want to see the full story, you can go through the full exercise of building the web app, instrumenting it with OpenTracing, binding to a tracer, AppDash, and finally seeing the traces, in this blog post.
 
-#### **Building the web app**
+## **Building the web app**
 
 To start off, write a few simple endpoints:
 
@@ -34,7 +36,7 @@ Put this all together into a working server.
 func main() {    port := 8080    addr := fmt.Sprintf(":%d", port)    mux := http.NewServeMux()    mux.HandleFunc("/", indexHandler)    mux.HandleFunc("/home", homeHandler)    mux.HandleFunc("/async", serviceHandler)    mux.HandleFunc("/service", serviceHandler)    mux.HandleFunc("/db", dbHandler)    fmt.Printf("Go to http://localhost:%d/home to start a request!\n", port)    log.Fatal(http.ListenAndServe(addr, mux))}
 ```
 
-Throw everything into main.go file and run go run main.go*.*
+Throw everything into `main.go` file and run: `go run main.go`.
 
 #### **Instrument the app**
 
@@ -44,7 +46,7 @@ Now that you have a working web server, you can start instrumenting it. Start at
 func homeHandler(w http.ResponseWriter, r *http.Request) {  span := opentracing.StartSpan("/home") // Start a span using the global, in this case noop, tracer  defer span.Finish()  // ... the rest of the function}
 ```
 
-This span records how long it takes homeHandler to complete, but that’s just the tip of the iceberg in terms of information that you can record. OpenTracing enables you to attach [tags](http://opentracing.io/spec/#tags) and [logs](http://opentracing.io/spec/#logs) to an individual span. For instance, you can specify whether or not a span contains an error insidehomeHandler:
+This span records how long it takes **homeHandler** to complete, but that’s just the tip of the iceberg in terms of information that you can record. OpenTracing enables you to attach [tags](http://opentracing.io/spec/#tags) and [logs](http://opentracing.io/spec/#logs) to an individual span. For instance, you can specify whether or not a span contains an error inside **homeHandler**:
 
 ```go
 // The ext package provides a set of standardized tags available for use.import "github.com/opentracing/opentracing-go/ext"func homeHandler(w http.ResponseWriter, r *http.Request) {// ...// We record any errors now.    _, err := http.Get("http://localhost:8080/service")    if err != nil {        ext.Error.Set(span, true) // Tag the span as errored        span.LogEventWithPayload("GET service error", err) // Log the error    }// ...}
@@ -52,13 +54,13 @@ This span records how long it takes homeHandler to complete, but that’s just t
 
 You can record other things as well, including important events, the user ID, and the browser type.
 
-However, that’s only for one function. To build true end-to-end traces, you’ll want to include spans for the client side of the HTTP calls. In our example, you need to start propagating span contexts downstream to the other endpoints now, and those endpoints need to be able to join traces. This is where the Inject/Extract part of the API comes into play. homeHandlercreates a "root" span since it’s the first thing to get called. You will start there and work your way down.
+However, that’s only for one function. To build true end-to-end traces, you’ll want to include spans for the client side of the HTTP calls. In our example, you need to start propagating span contexts downstream to the other endpoints now, and those endpoints need to be able to join traces. This is where the Inject/Extract part of the API comes into play. **homeHandler** creates a "root" span since it’s the first thing to get called. You will start there and work your way down.
 
 ```go
 func homeHandler(w http.ResponseWriter, r *http.Request) {    w.Write([]byte("Request started"))    span := opentracing.StartSpan("/home")    defer span.Finish()    // Since we have to inject our span into the HTTP headers, we create a request    asyncReq, _ := http.NewRequest("GET", "http://localhost:8080/async", nil)    // Inject the span context into the header    err := span.Tracer().Inject(span.Context(),        opentracing.TextMap,        opentracing.HTTPHeaderTextMapCarrier(asyncReq.Header))    if err != nil {        log.Fatalf("Could not inject span context into header: %v", err)    }    go func() {        if _, err := http.DefaultClient.Do(asyncReq); err != nil {            span.SetTag("error", true)            span.LogEvent(fmt.Sprintf("GET /async error: %v", err))        }    }()    // Repeat for the /service call.    // ....}
 ```
 
-What happens underneath is that the underlying implementation injects a span’s metadata about the current trace into the request’s headers to be read by anyone downstream. Go ahead and extract that data in serviceHandler.
+What happens underneath is that the underlying implementation injects a span’s metadata about the current trace into the request’s headers to be read by anyone downstream. Go ahead and extract that data in **serviceHandler**.
 
 ```go
 func serviceHandler(w http.ResponseWriter, r *http.Request) {    var sp opentracing.Span    opName := r.URL.Path    // Attempt to join a trace by getting trace context from the headers.    wireContext, err := opentracing.GlobalTracer().Extract(        opentracing.TextMap,        opentracing.HTTPHeaderTextMapCarrier(r.Header))    if err != nil {        // If for whatever reason we can't join, go ahead an start a new root span.        sp = opentracing.StartSpan(opName)    } else {        sp = opentracing.StartSpan(opName, opentracing.ChildOf(wireContext))    }  defer sp.Finish()  // ... rest of the function
@@ -66,7 +68,7 @@ func serviceHandler(w http.ResponseWriter, r *http.Request) {    var sp opentra
 
 And that’s it! If you repeat the steps above for things you want to trace, you should have a fully instrumented system fairly quickly. To decide what needs be traced, you should look at your requests’ critical paths.
 
-#### **Connect the tracer**
+## **Connect the tracer**
 
 One of the great things about OpenTracing is that once your system is instrumented, adding a tracer is really straightforward! In this example, you can see that I’ve used Appdash, an open source tracing system. There’s small chunk of code needed inside your main function to start the Appdash instance. However, you won’t need to touch any of your instrumentation code at all. In your main function, add:
 
