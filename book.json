@@ -2,7 +2,7 @@
   "gitbook": ">=3.2.1",
   "root": "_docs",
   "title": "Opentracing",
-  "plugins": ["edit-link", "github", "-search", "scripts"],
+  "plugins": ["fontsettings", "edit-link", "github", "-search", "scripts"],
   "pluginsConfig": {
      "scripts": {
         "files": [
@@ -10,7 +10,8 @@
         ]
     },
     "fontSettings": {
-      "theme": "white"
+      "theme": "white",
+       "size": 3
     },
     "edit-link": {
       "base": "https://github.com/opentracing/opentracing/tree/master",
@@ -20,8 +21,7 @@
       "url": "https://github.com/opentracing/opentracing.io/"
     },
     "theme-default": {
-      "showLevel": false,
-      "showSearch": false
+      "showLevel": true
     }
   }
 }
