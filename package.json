@@ -23,6 +23,7 @@
   "homepage": "https://github.com/prose/starter#readme",
   "dependencies": {},
   "devDependencies": {
-    "gitbook-cli": "^2.3.0"
+    "gitbook-cli": "^2.3.0",
+    "node-sass": "^3.10.1"
   }
 }
