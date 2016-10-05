@@ -32,6 +32,24 @@ $list-padding: 10px;
     transition: opacity 400ms;
     pointer-events: none;
 
+
+    &.mobile {
+      width: 94%;
+      right: inherit;
+      pointer-events: all;
+
+      h3 {
+        font-size: 30px;
+      }
+      a {
+        font-size: 20px;
+      }
+
+      :before, :after {
+        display: none;
+      }
+    }
+
     &.docs {
       min-width: 600px;
       max-height: 300px;

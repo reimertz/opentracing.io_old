@@ -3,9 +3,9 @@
   background: #26324c;
   border: 1px solid #37486e;
   border-radius: 7px;
-  min-height: 275px;
+  min-height: 274.75px;
   min-width: 350px;
-  max-width: 400px;
+  max-width: 399px;
   position: relative;
   box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.3);
   font-family: monospace; }
@@ -37,3 +37,29 @@
       white-space: pre-wrap;
       font-weight: 600;
       font-family: 'bariolthin'; }
+  @media (max-width: 1000px) {
+    .window {
+      min-height: 137.375px;
+      min-width: 262.5px;
+      max-width: 299.25px; }
+      .window__content {
+        font-size: 0.6rem; } }
+  @media (max-width: 768px) {
+    .window {
+      min-height: 137.375px;
+      min-width: 175px;
+      max-width: 199.5px; }
+      .window__content {
+        font-size: 0.4rem; } }
+  @media (max-width: 500px) {
+    .window {
+      min-height: 82.425px;
+      min-width: 105px;
+      max-width: 119.7px; }
+      .window__content {
+        font-size: 0.24rem; } }
+  @media (max-width: 400px) {
+    .window {
+      min-height: 82.425px;
+      min-width: 105px;
+      max-width: 119.7px; } }
