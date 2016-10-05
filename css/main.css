@@ -709,9 +709,10 @@ img, svg {
       right: inherit;
       pointer-events: all; }
       .dropdown__content.mobile h3 {
-        font-size: 30px; }
+        margin-top: 2rem;
+        font-size: 2.5rem; }
       .dropdown__content.mobile a {
-        font-size: 20px; }
+        font-size: 1.7rem; }
       .dropdown__content.mobile :before, .dropdown__content.mobile :after {
         display: none; }
     .dropdown__content.docs {
