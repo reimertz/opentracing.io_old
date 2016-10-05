@@ -7,10 +7,10 @@ OpenTracing APIs are **available** for the following platforms:
 * Javascript ([1.0RC](#v1rc)) - [https://github.com/opentracing/opentracing-javascript](https://github.com/opentracing/opentracing-javascript)
 * Objective-C - ([1.0RC](#v1rc)) - [https://github.com/opentracing/opentracing-objc](https://github.com/opentracing/opentracing-objc)
 * Java - ([1.0RC](#v1rc)) - [https://github.com/opentracing/opentracing-java](https://github.com/opentracing/opentracing-java)
+* C++ - [https://github.com/opentracing/opentracing-cpp](https://github.com/opentracing/opentracing-cpp)
 
 OpenTracing APIs are **in progress** for the following platforms:
 
-* C++ - [https://github.com/lookfwd/opentracing-cpp/pull/1](https://github.com/lookfwd/opentracing-cpp/pull/1)
 * PHP - link forthcoming
 * Ruby - link forthcoming
 
