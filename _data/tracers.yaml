@@ -1,7 +1,7 @@
 category: Tracers
 array:
   - name: Zipkin
-    url: http://zipkin.com
+    url: http://zipkin.io
     icon: img/tracers/zipkin_small.png
 
   - name: Lightstep
@@ -9,9 +9,9 @@ array:
     icon: http://lightstep.com/images/logo-white.png
 
   - name: Appdash
-    url: http://appdash.com
+    url: https://github.com/sourcegraph/appdash
     icon: img/tracers/appdash.png
 
   - name: Tracer
-    url: http://tracer.com
+    url: https://github.com/tracer/tracer
     icon: false
