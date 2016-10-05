@@ -6,7 +6,7 @@ array:
 
   - name: Finagle
     url: https://twitter.github.io/finagle
-    icon: https://pbs.twimg.com/media/BXhBtGoCYAAFwwJ.png
+    icon: img/frameworks/finagle.png
 
   - name: Flask
     url: http://flask.pocoo.org/
@@ -14,8 +14,8 @@ array:
 
   - name: Django
     url: https://www.djangoproject.com
-    icon: img/frameworks/django_white.svg
+    icon: img/frameworks/django.svg
 
   - name: Dropwizard
     url: http://www.dropwizard.io/
-    icon: https://objectpartners.com/wp-content/uploads/2015/02/dropwizard-logo.png
+    icon: false

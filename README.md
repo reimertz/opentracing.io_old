@@ -1,32 +1,37 @@
+This repository contains the source code for http://opentracing.github.io website, generated with Jekyll + Node.js + Gitbook.
 
-OpenTracing.io
+
+## Making changes
+
+Create a branch, test the change locally, then create a pull request.
 
 
-### Prerequisits
+## Running Opentracing.io locally
 
-you need to have node.js, npm, jekyll installed on your computer.
+### Prerequisites
+
+you need to have Node.js, NPM and Jekyll installed on your computer.
+
 
 ### Install dependencies
 ```
 npm install
 ```
 
-### run development
+### Run development server
 ```
 npm run dev
-open http://localhost:3000 #
+open http://localhost:3000
 ```
 
-##Gitbook
+## Running Gitbook locally (to edit documentation)
 
-### run gitbook
+### Run gitbook server
 ```
 npm run docs:watch
 ```
 
-### build documentation for static site (http://opentracing.io)
+### Build Documentation
 ```
 npm run docs:build
 ```
-
-

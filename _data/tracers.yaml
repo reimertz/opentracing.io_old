@@ -10,7 +10,7 @@ array:
 
   - name: Appdash
     url: http://appdash.com
-    icon: https://raw.githubusercontent.com/sourcegraph/appdash-data/master/data/logo_red.png
+    icon: img/tracers/appdash.png
 
   - name: Tracer
     url: http://tracer.com
