@@ -13,16 +13,16 @@
   font-family: 'bariolthin';
 
   &__section {
-    flex: 1;
+    flex: 2;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    flex-direction: row;
-    margin-top: 20px;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 
     &.why-tracing {
-      margin-top: 0px;
-      flex: 2;
+      margin-top: 40px;
+      flex: 3;
       text-align: center;
       align-items: center;
     }
@@ -30,8 +30,7 @@
 
   &__figure {
     flex: 1;
-    margin-right: 2rem;
-    max-width: 70px;
+    max-width:50px;
   }
 
   &__content {

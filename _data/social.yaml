@@ -3,14 +3,16 @@ array:
   - name: Medium
     url:  //medium.com/opentracing
     icon: https://simpleicons.org/icons/medium.svg
+    color: '#00AB6B'
   - name: Github
     url:  //github.com/opentracing
     icon: https://simpleicons.org/icons/github.svg
+    color: '#FFF'
   - name: Twitter
     url:  //twitter.com/opentracing
     icon: https://simpleicons.org/icons/twitter.svg
+    color: '#1DA1F2'
   - name: Gitter
     url:  //gitter.im/opentracing/public
     icon: https://simpleicons.org/icons/gitter.svg
-
-
+    color: '#FF0064'

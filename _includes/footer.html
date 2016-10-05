@@ -21,7 +21,7 @@
 
       <div class="footer__social_icons">
         {% for social in site.data.social.array %}
-          <a href="{{social.url}}"><img src="{{social.icon}}" alt=""></a>
+          <a href="{{social.url}}"><img src="{{ social.icon }}" alt="" style="color: {{social.color}};"></a>
         {% endfor %}
       </div>
     </div>

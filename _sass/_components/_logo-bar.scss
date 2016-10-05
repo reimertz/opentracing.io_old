@@ -26,8 +26,8 @@ $logo-bar-scale: 15px;
   }
 
   &__logos {
-    max-width: 400px;
-    min-width: $logo-bar-scale * 4 * 3;
+    max-width: $medium / 2;
+    min-width: $medium / 2;
     display: flex;
     flex: 1;
     align-items: center;
@@ -78,7 +78,7 @@ $logo-bar-scale: 15px;
 
   @media (max-width: $medium) {
     &__logos {
-      width: 100%;
+      max-width: 100%;
       min-height: 40px;
       a {
         flex-grow: 1;

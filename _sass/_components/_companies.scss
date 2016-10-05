@@ -46,6 +46,10 @@
       width: 100%;
       a {
         flex-grow: 1;
+
+        img {
+          height: 20px;
+        }
       }
     }
   }
