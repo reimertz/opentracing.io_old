@@ -7,15 +7,11 @@
       <div class="dropdown">
         <a class="dropdown__button" href="documentation">Docs</a>
         <div class="dropdown__content docs">
-          {% for file in site.static_files %}
-            {% if file.extname == '.html' %}
-              {% if file.path contains '/documentation/pages/' %}
-                {% assign url = file.path %}
-                {% assign name = file.path | remove: file.extname | remove: '/documentation/pages/' | replace: '-', ' ' %}
-                  <a href="{{url}}">{{name}}</a>
-              {% endif %}
-            {% endif %}
-          {% endfor %}
+          <a href="documentation">Overview</a>
+          <a href="documentation/pages/quick-start">Quickstart</a>
+          <a href="documentation/pages/concepts-and-terminology">Semantic Specifications</a>
+          <a href="documentation/pages/common-use-cases">Common use cases</a>
+          <a href="documentation/pages/instrumenting-frameworks">Instrumenting a framework</a>
         </div>
       </div>
       <div class="dropdown">
@@ -39,15 +35,11 @@
     <div class="dropdown__content mobile">
       <div class="header__close__button">✕</div>
       <h3>Docs</h3>
-        {% for file in site.static_files %}
-          {% if file.extname == '.html' %}
-            {% if file.path contains '/documentation/pages/' %}
-              {% assign url = file.path %}
-              {% assign name = file.path | remove: file.extname | remove: '/documentation/pages/' | replace: '-', ' ' %}
-                <a href="{{url}}">{{name}}</a>
-            {% endif %}
-          {% endif %}
-        {% endfor %}
+        <a href="documentation">Overview</a>
+        <a href="documentation/pages/quick-start">Quickstart</a>
+        <a href="documentation/pages/concepts-and-terminology">Semantic Specifications</a>
+        <a href="documentation/pages/common-use-cases">Common use cases</a>
+        <a href="documentation/pages/instrumenting-frameworks">Instrumenting a framework</a>
       <h3>Github</h3>
       {% for language in site.data.language.array %}
         <a href="{{language.url}}">{{ language.name }}</a>

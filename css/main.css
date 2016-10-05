@@ -716,8 +716,7 @@ img, svg {
       .dropdown__content.mobile :before, .dropdown__content.mobile :after {
         display: none; }
     .dropdown__content.docs {
-      min-width: 600px;
-      max-height: 300px;
+      min-width: 175px;
       flex-wrap: wrap; }
     .dropdown__content.language {
       min-width: 175px;
