@@ -9,6 +9,7 @@
 @import '_components/header';
 @import '_components/footer';
 @import '_components/hero';
+@import '_components/dropdown';
 @import '_components/window';
 @import '_components/logo-bar';
 @import '_components/why';
@@ -58,7 +59,6 @@ a {
 .container {
   max-width: $max-width;
 }
-
 
 .dark-blue {
   color: $blue-black;

@@ -1,21 +1,29 @@
 <header class="header">
   <div class="header__container">
     <div class="header__logo">
-      <img src="img/logo.png">
+      <a href="http://opentracing.io"><img src="img/logo.png"></a>
     </div>
     <div class="header__actions">
-      <a href="#">Overview</a>
-      <a href="documentation">Docs</a>
+      <div class="dropdown">
+        <a class="dropdown__button" href="documentation">Docs</a>
+        <div class="dropdown__content docs">
+          {% for file in site.static_files %}
+            {% if file.extname == '.html' %}
+              {% if file.path contains '/documentation/pages/' %}
+                {% assign url = file.path %}
+                {% assign name = file.path | remove: file.extname | remove: '/documentation/pages/' | replace: '-', ' ' %}
+                  <a href="{{url}}">{{name}}</a>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
       <div class="dropdown">
         <a class="dropdown__button" href="https://github.com/opentracing">Github</a>
-        <div class="dropdown__content">
-          <a href="https://github.com/opentracing/opentracing-go">Go</a>
-          <a href="https://github.com/opentracing/opentracing-javascript">JavaScript</a>
-          <a href="https://github.com/opentracing/opentracing-java">Java</a>
-          <a href="https://github.com/opentracing/opentracing-python">Python</a>
-          <a href="https://github.com/opentracing/opentracing-objective-c">Objective-C</a>
-          <a href="https://github.com/opentracing/opentracing-csharp">C#</a>
-          <a href="https://github.com/opentracing/opentracing-cpp">C++</a>
+        <div class="dropdown__content language">
+          {% for language in site.data.language.array %}
+            <a href="{{language.url}}">{{ language.name }}</a>
+          {% endfor %}
         </div>
       </div>
 

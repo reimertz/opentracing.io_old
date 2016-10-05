@@ -296,10 +296,10 @@
 <p>The two fundamental aspects of implementing OpenTracing across your infrastructure are <em>Spans</em> and the <em>Relationships</em> between those spans:</p>
 <ul>
 <li><p><strong><em><a href="http://opentracing.io/spec/#spans" target="_blank">Span</a></em></strong> is a logical unit of work in the system that has a start time and a duration. In a trace Spans are associated with the components of the system as they are exercised on a specified path.</p>
-<p><img src="../img/OTHT_0.png" alt="image of spans in a system"></p>
+<p><img src="../images/OTHT_0.png" alt="image of spans in a system"></p>
 </li>
 <li><p><strong><em><a href="http://opentracing.io/spec/#causal-span-references" target="_blank">Relationships</a></em></strong> are the connections between Spans. A Span may reference zero or more Spans that are causally related. This allows for the spans to be connected and help identify the critical path of a trace.</p>
-<p><img src="../img/OTHT_1.png" alt="image of relationships in a system"></p>
+<p><img src="../images/OTHT_1.png" alt="image of relationships in a system"></p>
 </li>
 </ul>
 <p>Your desired end state is to get Spans for all or your code components as well as the relationships between those Spans. When starting to build out your infrastructure with distributed tracing the best practice is to start with service frameworks (i.e. RPC layer) or other components known to have broad interaction with multiple execution paths.</p>
@@ -317,20 +317,20 @@
 <p>For this example we want to trace a request initiated by a mobile client and propagating through a small constellation of backend services.</p>
 <ol>
 <li><p>First, we must identify the overall flow of the transaction. In our example, the transactions look like this:</p>
-<p><img src="../img/OTHT_2.png" alt="image showing a system transaction"></p>
+<p><img src="../images/OTHT_2.png" alt="image showing a system transaction"></p>
 <p><strong><em>Start with a user action that creates a web request from a mobile client (HTTP) &#x2192; web tier (RPC) &#x2192; auth service (RPC) &#x2192; billing service (RPC) &#x2192; resource request (API) &#x2192; response to web tier (API) &#x2192; response to client (HTTP)</em></strong></p>
 </li>
 <li><p>Now that we have high-level conceptual understanding of a transaction flow we can look to instrument a few of the broader protocols and frameworks. The best choice will be to start with the RPC service since this will be an easy way to gather  spans for everything happening behind the web service (or at least everything leveraging the RPC service directly).</p>
 </li>
 <li><p>The next component that makes sense to instrument is the web framework. By adding the web framework we are able to then have an end-to-end trace. It may be rough, but at least the full workflow can be captured by our tracing system.</p>
-<p><img src="../img/OTHT_3.png" alt="image of a high-level trace"></p>
+<p><img src="../images/OTHT_3.png" alt="image of a high-level trace"></p>
 </li>
 <li><p>At this point we want to take a look at the trace and evaluate where our efforts will provide the greatest value. In our example we can see the area that has the greatest delay for this request is the time it takes for resources to be allocated. This is likely a good place to start adding more granular visibility into the allocation process and instrument the components involved. Once we instrument the resource API we see that resource request can be broken down into:</p>
-<p><img src="../img/OTHT_4.png" alt="image of a mid-level trace showing a serialized process">
+<p><img src="../images/OTHT_4.png" alt="image of a mid-level trace showing a serialized process">
 <strong><em>resource request (API) &#x2192; container startup (API) &#x2192; storage allocation (API) &#x2192; startup scripts (API) &#x2192; resource ready response (API)</em></strong></p>
 </li>
 <li><p>Once we have instrumented the resource allocation process components, we can see that the bulk of the time is during resource provisioning. The next step would be to go a bit deeper and look to see if there were optimizations that could be done in this process. Maybe we could provision resources in parallel rather than in serial.</p>
-<p><img src="../img/OTHT_5.png" alt="image of a mid-level trace showing a parallelized process"></p>
+<p><img src="../images/OTHT_5.png" alt="image of a mid-level trace showing a parallelized process"></p>
 </li>
 <li><p>Now that there is visibility and an established baseline for an end-to-end workflow, we can articulate a realistic external SLO for that request. In addition, articulating SLO&#x2019;s for internal services can also become part of the conversation about uptime and error budgets.</p>
 </li>
@@ -382,7 +382,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"instrumenting large systems","level":"1.11","depth":1,"next":{"title":"supported tracer","level":"1.12","depth":1,"path":"pages/supported-tracer.md","ref":"pages/supported-tracer.md","articles":[]},"previous":{"title":"instrumenting frameworks","level":"1.10","depth":1,"path":"pages/instrumenting-frameworks.md","ref":"pages/instrumenting-frameworks.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","github","livereload"],"root":"_docs","styles":{"website":"build/gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/opentracing/opentracing.io/"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white"},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/opentracing/opentracing/tree/master"},"theme-default":{"styles":{"website":"build/gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Opentracing","gitbook":">=3.2.1"},"file":{"path":"pages/instrumenting-large-systems.md","mtime":"2016-10-04T21:14:08.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-04T23:44:21.625Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"instrumenting large systems","level":"1.11","depth":1,"next":{"title":"supported tracer","level":"1.12","depth":1,"path":"pages/supported-tracer.md","ref":"pages/supported-tracer.md","articles":[]},"previous":{"title":"instrumenting frameworks","level":"1.10","depth":1,"path":"pages/instrumenting-frameworks.md","ref":"pages/instrumenting-frameworks.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","github","livereload"],"root":"_docs","styles":{"website":"build/gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/opentracing/opentracing.io/"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white"},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/opentracing/opentracing/tree/master"},"theme-default":{"styles":{"website":"build/gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Opentracing","gitbook":">=3.2.1"},"file":{"path":"pages/instrumenting-large-systems.md","mtime":"2016-10-05T12:03:19.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-05T15:18:32.080Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

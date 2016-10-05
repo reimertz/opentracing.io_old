@@ -1,29 +1,29 @@
 category: Languages
 array:
   - name: Go
-    url: http://grpc.io
+    url: //github.com/opentracing/opentracing-go
     icon: ''
 
   - name: JavaScript
-    url: https://github.com/opentracing/opentracing-javascript
+    url: //github.com/opentracing/opentracing-javascript
     icon: ''
 
   - name: Java
-    url: https://github.com/opentracing/opentracing-java
+    url: //github.com/opentracing/opentracing-java
     icon: ''
 
   - name: Python
-    url: https://github.com/opentracing/opentracing-python
+    url: //github.com/opentracing/opentracing-python
     icon: ''
 
   - name: Objecttive-C
-    url: https://github.com/opentracing/opentracing-objective-c
+    url: //github.com/opentracing/opentracing-objective-c
     icon: ''
 
   - name: C#
-    url: https://github.com/opentracing/opentracing-csharp
+    url: //github.com/opentracing/opentracing-csharp
     icon: ''
 
   - name: C++
-    url: https://github.com/opentracing/opentracing-cpp
+    url: //github.com/opentracing/opentracing-cpp
     icon: ''

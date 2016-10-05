@@ -9,7 +9,7 @@
       <h2 class="dark-blue">Libraries available in 6 languanges</h2>
       <p class="dark-blue">
       {% for language in site.data.language.array %}
-        <a href="{{languange.url}}">{{ language.name }}</a>{% if forloop.last == false %},{% endif %}
+        <a href="{{language.url}}">{{ language.name }}</a>{% if forloop.last == false %},{% endif %}
       {% endfor %}
       </p>
     </section>

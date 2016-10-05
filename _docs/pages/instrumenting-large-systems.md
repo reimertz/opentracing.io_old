@@ -8,11 +8,11 @@ The two fundamental aspects of implementing OpenTracing across your infrastructu
 
 * **_[Span](http://opentracing.io/spec/#spans)_** is a logical unit of work in the system that has a start time and a duration. In a trace Spans are associated with the components of the system as they are exercised on a specified path.
 
-  ![image of spans in a system](/img/OTHT_0.png)
+  ![image of spans in a system](/images/OTHT_0.png)
 
 * **_[Relationships](http://opentracing.io/spec/#causal-span-references)_** are the connections between Spans. A Span may reference zero or more Spans that are causally related. This allows for the spans to be connected and help identify the critical path of a trace.
 
-  ![image of relationships in a system](/img/OTHT_1.png)
+  ![image of relationships in a system](/images/OTHT_1.png)
 
 Your desired end state is to get Spans for all or your code components as well as the relationships between those Spans. When starting to build out your infrastructure with distributed tracing the best practice is to start with service frameworks (i.e. RPC layer) or other components known to have broad interaction with multiple execution paths.
 
@@ -42,7 +42,7 @@ For this example we want to trace a request initiated by a mobile client and pro
 
 1. First, we must identify the overall flow of the transaction. In our example, the transactions look like this:
 
-  ![image showing a system transaction](/img/OTHT_2.png)
+  ![image showing a system transaction](/images/OTHT_2.png)
 
   **_Start with a user action that creates a web request from a mobile client (HTTP) → web tier (RPC) → auth service (RPC) → billing service (RPC) → resource request (API) → response to web tier (API) → response to client (HTTP)_**
 
@@ -50,16 +50,16 @@ For this example we want to trace a request initiated by a mobile client and pro
 
 3. The next component that makes sense to instrument is the web framework. By adding the web framework we are able to then have an end-to-end trace. It may be rough, but at least the full workflow can be captured by our tracing system.
 
-  ![image of a high-level trace](/img/OTHT_3.png)
+  ![image of a high-level trace](/images/OTHT_3.png)
 
 4. At this point we want to take a look at the trace and evaluate where our efforts will provide the greatest value. In our example we can see the area that has the greatest delay for this request is the time it takes for resources to be allocated. This is likely a good place to start adding more granular visibility into the allocation process and instrument the components involved. Once we instrument the resource API we see that resource request can be broken down into:
 
-  ![image of a mid-level trace showing a serialized process](/img/OTHT_4.png)
+  ![image of a mid-level trace showing a serialized process](/images/OTHT_4.png)
   **_resource request (API) → container startup (API) → storage allocation (API) → startup scripts (API) → resource ready response (API)_**
 
 5. Once we have instrumented the resource allocation process components, we can see that the bulk of the time is during resource provisioning. The next step would be to go a bit deeper and look to see if there were optimizations that could be done in this process. Maybe we could provision resources in parallel rather than in serial.
 
-  ![image of a mid-level trace showing a parallelized process](/img/OTHT_5.png)
+  ![image of a mid-level trace showing a parallelized process](/images/OTHT_5.png)
 
 6. Now that there is visibility and an established baseline for an end-to-end workflow, we can articulate a realistic external SLO for that request. In addition, articulating SLO’s for internal services can also become part of the conversation about uptime and error budgets.
 
