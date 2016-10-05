@@ -2,9 +2,14 @@
   "gitbook": ">=3.2.1",
   "root": "_docs",
   "title": "Opentracing",
-  "plugins": ["edit-link", "github", "livereload"],
+  "plugins": ["edit-link", "github", "-search", "scripts"],
   "pluginsConfig": {
-   "fontSettings": {
+     "scripts": {
+        "files": [
+          "scripts/injectLogo.js"
+        ]
+    },
+    "fontSettings": {
       "theme": "white"
     },
     "edit-link": {
@@ -16,9 +21,7 @@
     },
     "theme-default": {
       "showLevel": false,
-      "styles": {
-        "website": "build/gitbook.css"
-      }
+      "showSearch": false
     }
   }
 }
