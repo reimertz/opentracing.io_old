@@ -1,12 +1,13 @@
 @import '../variables';
 
-$hero-height: 80vh;
+$font-size: 1.3rem;
 
 .button {
   border-radius: 5px;
   color: $darker-blue;
   padding: 0.5rem;
   cursor: pointer;
+  font-size: $font-size;
   &:hover {
     &:before {
       margin-right: 15px;
