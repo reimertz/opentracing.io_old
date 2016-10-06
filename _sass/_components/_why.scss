@@ -42,6 +42,8 @@
 
   @media (max-width: $medium) {
     margin: 10vh auto;
+    width: 80vw;
+    flex-direction: column;
 
     .why-tracing {
       order: 1;
