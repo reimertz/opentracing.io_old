@@ -1209,7 +1209,8 @@ img, svg {
 .button {
   border-radius: 5px;
   color: #4098c8;
-  padding: 0.5rem; }
+  padding: 0.5rem;
+  cursor: pointer; }
   .button:hover:before {
     margin-right: 15px; }
   .button:before {
@@ -1227,8 +1228,8 @@ img, svg {
   .button.white {
     color: white; }
     .button.white:before {
-      background: white;
-      color: #4098c8; }
+      border-color: white;
+      color: white; }
 
 html, body {
   padding: 0;

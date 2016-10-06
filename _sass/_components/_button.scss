@@ -6,7 +6,7 @@ $hero-height: 80vh;
   border-radius: 5px;
   color: $darker-blue;
   padding: 0.5rem;
-
+  cursor: pointer;
   &:hover {
     &:before {
       margin-right: 15px;
@@ -31,8 +31,8 @@ $hero-height: 80vh;
     color: white;
 
     &:before {
-      background: white;
-      color: $darker-blue;
+      border-color: white;
+      color: white;
     }
   }
 }
