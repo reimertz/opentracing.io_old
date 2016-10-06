@@ -593,8 +593,8 @@ img, svg {
     justify-content: space-between; }
     .footer__social_icons img {
       flex-grow: 1;
-      height: 20px;
-      max-height: 20px;
+      height: 25px;
+      max-height: 25px;
       flex-direction: row; }
   .footer__social_newsletter {
     color: white; }
