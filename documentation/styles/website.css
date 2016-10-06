@@ -20,6 +20,10 @@ a: hover {
   margin: 15px 12px;
 }
 
+.book-summary ul.summary li a, .book-summary ul.summary li span.active {
+  font-weight: 700;
+}
+
 .book-summary ul.summary li a, .book-summary ul.summary li span {
   color: white !important;
 }
