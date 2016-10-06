@@ -16,7 +16,7 @@
   </div>
   <section class="logo-bar logo-bar--bottom">
     <div class="logo-bar__content">
-      <!-- <p>Supported tracers</p> -->
+
       <div class="logo-bar__logos">
         {% for tracer in site.data.tracers.array %}
             <a href="{{tracer.url}}">
@@ -28,7 +28,6 @@
             </a>
         {% endfor %}
       </div>
-      <!-- <p>Compatible frameworks</p> -->
       <div class="logo-bar__logos">
         {% for framework in site.data.frameworks.array %}
           <a href="{{framework.url}}">

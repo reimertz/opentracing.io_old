@@ -850,14 +850,46 @@ img, svg {
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
+<<<<<<< HEAD
     flex-wrap: wrap; }
+=======
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .logo-bar__logos__title {
+    position: absolute;
+    top: -50px;
+    /* left: 0; */
+    font-size: 1rem;
+    /* padding-left: 8px; */
+    width: 100%;
+    /* text-align: right; */
+    left: 8px;
+    opacity: 0.7; }
+    .logo-bar__logos__title .right {
+      left: auto;
+      right: 8px; }
+>>>>>>> fix logo bar
   .logo-bar__logos {
     max-width: 384px;
     min-width: 384px;
     display: flex;
+<<<<<<< HEAD
     flex: 1 auto;
     align-items: center;
     flex-direction: row; }
+=======
+    -webkit-box-flex: 1;
+        -ms-flex: 1 auto;
+            flex: 1 auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: relative; }
+>>>>>>> fix logo bar
     .logo-bar__logos:first-child {
       justify-content: flex-start; }
     .logo-bar__logos:last-child {
@@ -874,29 +906,35 @@ img, svg {
         font-size: 15px; }
       .logo-bar__logos a img, .logo-bar__logos a svg {
         max-width: 120px;
-        max-height: 15px; }
+        height: 15px;
+        max-height: 18.75px; }
+        .logo-bar__logos a img[src*="flask.svg"], .logo-bar__logos a svg[src*="flask.svg"] {
+          max-height: 18.75px; }
         .logo-bar__logos a img[src*="zipkin_small.png"], .logo-bar__logos a svg[src*="zipkin_small.png"] {
           max-height: 12px; }
         .logo-bar__logos a img[src*="appdash.png"], .logo-bar__logos a svg[src*="appdash.png"] {
           max-height: 19.5px; }
         .logo-bar__logos a img[src*="finagle"], .logo-bar__logos a svg[src*="finagle"] {
-          max-height: 22.5px; }
+          max-height: 16.5px; }
   @media (max-width: 768px) {
     .logo-bar__logos {
       max-width: 100%;
       min-width: 100%;
       min-height: 40px; }
-      .logo-bar__logos a[href*="tracer"], .logo-bar__logos a[href*="dropwizard"] {
+      .logo-bar__logos[href*="tracer"], .logo-bar__logos[href*="dropwizard"] {
         font-size: 7.5px; }
-      .logo-bar__logos a img, .logo-bar__logos a svg {
+      .logo-bar__logos img, .logo-bar__logos svg {
         max-width: 60px;
-        max-height: 7.5px; }
-        .logo-bar__logos a img[src*="zipkin_small.png"], .logo-bar__logos a svg[src*="zipkin_small.png"] {
+        height: 7.5px;
+        max-height: 9.375px; }
+        .logo-bar__logos img[src*="flask.svg"], .logo-bar__logos svg[src*="flask.svg"] {
+          max-height: 9.375px; }
+        .logo-bar__logos img[src*="zipkin_small.png"], .logo-bar__logos svg[src*="zipkin_small.png"] {
           max-height: 6px; }
-        .logo-bar__logos a img[src*="appdash.png"], .logo-bar__logos a svg[src*="appdash.png"] {
+        .logo-bar__logos img[src*="appdash.png"], .logo-bar__logos svg[src*="appdash.png"] {
           max-height: 9.75px; }
-        .logo-bar__logos a img[src*="finagle"], .logo-bar__logos a svg[src*="finagle"] {
-          max-height: 11.25px; } }
+        .logo-bar__logos img[src*="finagle"], .logo-bar__logos svg[src*="finagle"] {
+          max-height: 8.25px; } }
 
 .why {
   margin: 20vh auto 10vh auto;
