@@ -25,4 +25,14 @@ $hero-height: 80vh;
     border-radius: 12px;
     margin-right: 10px;
   }
+
+
+  &.white {
+    color: white;
+
+    &:before {
+      background: white;
+      color: $darker-blue;
+    }
+  }
 }
