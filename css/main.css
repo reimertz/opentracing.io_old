@@ -657,6 +657,8 @@ img, svg {
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row; }
+  .footer__social_newsletter {
+    color: white; }
   .footer__actions {
     color: white;
     display: -webkit-box;
