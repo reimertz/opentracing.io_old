@@ -14,8 +14,8 @@ array:
 
   - name: Joyent
     url: https://www.joyent.com
-    icon: https://upload.wikimedia.org/wikipedia/commons/9/96/Joyent-logo.png
+    icon: img/companies/joyent.png
 
   - name: Cockroach Labs
     url: https://www.cockroachlabs.com
-    icon: https://raw.githubusercontent.com/grpc/grpc.github.io/master/img/cockroach-1.png
+    icon: img/companies/cockroach.png
