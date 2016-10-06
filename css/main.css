@@ -1100,7 +1100,8 @@ img, svg {
         -ms-flex: 3;
             flex: 3; }
     .why__content h2 {
-      color: #5ea7d1; }
+      color: #5ea7d1;
+      font-size: 2.9em; }
   @media (max-width: 768px) {
     .why {
       margin: 10vh auto;
