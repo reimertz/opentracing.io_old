@@ -25,7 +25,6 @@
     &.form {
       flex: 2;
       text-align: center;
-      width: 300px;
     }
 
     &.resources {
@@ -63,6 +62,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
     img {
       flex-grow: 1;
       height: 20px;
@@ -96,9 +96,15 @@
 
     &__actions {
       align-items: center;
+
+      a {
+        font-size: 1.5rem;
+        padding: 15px 5px;
+      }
     }
 
     &__subtitle {
+      font-size: 1.75rem;
       margin-top: 20px;
       width: 100%;
       &:not(.no-line):after {
@@ -131,6 +137,14 @@
 
     &__actions {
       max-height: 200px;
+
+      .documentation  & {
+        max-height: 175px;
+      }
+
+      .ecosystem  & {
+        max-height: 125px;
+      }
     }
   }
 }
