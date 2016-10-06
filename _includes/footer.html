@@ -9,7 +9,7 @@
             {% if file.path contains '/documentation/pages/' %}
               {% assign url = file.path %}
               {% assign name = file.path | remove: file.extname | remove: '/documentation/pages/' | replace: '-', ' ' %}
-                <a href="{{url}}">{{name}}</a>
+                <a href="{{site.url}}{{url}}">{{name}}</a>
             {% endif %}
           {% endif %}
         {% endfor %}
