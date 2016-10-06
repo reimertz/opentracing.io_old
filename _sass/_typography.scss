@@ -52,11 +52,6 @@ big {
   p { font-size: $p-font-size * 1.25; }
 }
 
-@media (max-width: $xlarge) {
-  html {
-    font-size: 90%;
-  }
-}
 
 @media (max-width: $large) {
   html {
