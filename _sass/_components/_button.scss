@@ -36,4 +36,9 @@ $font-size: 1.3rem;
       color: white;
     }
   }
+
+  @media (max-width: $medium) {
+    font-weight: 600;
+  }
+
 }

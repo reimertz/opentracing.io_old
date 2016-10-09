@@ -37,7 +37,13 @@
     h2 {
       color: $dark-blue;
       font-size: 2.9em;
+      font-weight: 700;
     }
+
+    h4, p {
+      font-weight: 700;
+    }
+
   }
 
   @media (max-width: $medium) {

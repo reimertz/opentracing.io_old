@@ -3,21 +3,28 @@
     <div class="footer__section documentation">
       <h4 class="footer__subtitle">Documentation</h4>
       <div class="footer__actions">
-        <!-- yep, I had to do this to make documentation links non-static. jekyll 4.0 will solve this -->
-        {% for file in site.static_files %}
-          {% if file.extname == '.html' %}
-            {% if file.path contains '/documentation/pages/' %}
-              {% assign url = file.path %}
-              {% assign name = file.path | remove: file.extname | remove: '/documentation/pages/' | replace: '-', ' ' %}
-                <a href="{{site.url}}{{url}}">{{name}}</a>
+      <a href="documentation">Overview</a>
+      <a href="documentation/pages/quick-start">Quickstart</a>
+      <a href="documentation/pages/api/">API</a>
+      <a href="documentation/pages/instrumentation">Instrumentation</a>
+      <a href="documentation/pages/concepts-and-terminology">Concepts and Terminology</a>
+
+        <!-- yep, I had to do this to make documentation links non-static. jekyll 4.0 will solve this
+          {% for file in site.static_files %}
+            {% if file.extname == '.html' %}
+              {% if file.path contains '/documentation/pages/' %}
+                {% assign url = file.path %}
+                {% assign name = file.path | remove: file.extname | remove: '/documentation/pages/' | replace: '-', ' ' %}
+                  <a href="{{site.url}}{{url}}">{{name}}</a>
+              {% endif %}
             {% endif %}
-          {% endif %}
-        {% endfor %}
+          {% endfor %}
+        -->
       </div>
     </div>
 
     <div class="footer__section form">
-      <h4 class="footer__subtitle no-line">Connect with OpenTracing</h4>
+      <h4 class="footer__subtitle full-width-line">Connect with OpenTracing</h4>
 
       <div class="footer__social_icons">
         {% for social in site.data.social.array %}
@@ -32,8 +39,6 @@
       <div class="footer__actions">
         <a href="/about">About</a>
         <a href="https://medium.com/opentracing">Blog</a>
-        <a href="https://medium.com/opentracing">News/Events</a>
-        <a href="/about">FAQ</a>
       </div>
     </div>
 

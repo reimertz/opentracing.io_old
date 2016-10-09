@@ -1,5 +1,7 @@
 @import '../variables';
 
+$line-width: 30%;
+
 .footer {
   background: $dark-purple;
   position: relative;
@@ -51,8 +53,13 @@
       display: block;
       height: 1px;
       margin: 15px 0;
-      width: 30%;
+      width: $line-width;
       background: rgba(white, 0.5);
+    }
+
+    &.full-width-line:after {
+      margin-left:  calc( (100% - #{ $line-width }) / 2);
+      margin-right: calc( (100% - #{ $line-width }) / 2);
     }
   }
 
@@ -102,6 +109,7 @@
       align-items: center;
 
       a {
+        font-weight: 600;
         font-size: 1.5rem;
         padding: 15px 5px;
       }
@@ -135,16 +143,11 @@
 
   @media (min-width: $large) {
     .documentation {
-      flex: 2;
-      width: 200px;
+      flex: 1;
     }
 
     &__actions {
       max-height: 200px;
-
-      .documentation  & {
-        max-height: 175px;
-      }
 
       .ecosystem  & {
         max-height: 125px;
