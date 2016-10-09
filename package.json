@@ -13,10 +13,10 @@
     "css:build": "node-sass _sass/main.scss -o css && npm run css:autoprefixer",
     "css:watch": "onchange _sass -- npm run css:build",
     "===================================":"===================================",
-    "build:production": "npm run css:build && npm run docs:build && jekyll build --config _config.production.yml",
-    "build:localhost": "npm run css:build && npm run docs:build && jekyll build --config _config.dev.yml",
+    "build:production": "npm run css:build && npm run docs:build && jekyll build --config _config.yml",
+    "build:localhost": "npm run css:build && npm run docs:build && jekyll build --config _config.localhost.yml",
     "===================================":"===================================",
-    "dev": "npm run build:localhost && parallelshell 'jekyll serve --config _config.dev.yml'  'npm run css:watch'  'npm run docs:watch'",
+    "dev": "npm run build:localhost && parallelshell 'jekyll serve --config _config.localhost.yml'  'npm run css:watch'  'npm run docs:watch'",
     "production": "npm run build:production",
     "===================================":"==================================="
   },
