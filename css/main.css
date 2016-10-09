@@ -774,6 +774,8 @@ img, svg {
       margin-top: 4rem;
       width: 100%; }
       .footer__subtitle:not(.no-line):after {
+        margin-left: 0;
+        margin-right: 0;
         width: 100%; }
     .footer .documentation {
       -webkit-box-ordinal-group: 2;
@@ -793,11 +795,13 @@ img, svg {
               order: 3; } }
   @media (min-width: 1000px) {
     .footer .documentation {
-      -webkit-box-flex: 1;
-          -ms-flex: 1;
-              flex: 1; }
+      -webkit-box-flex: 2;
+          -ms-flex: 2;
+              flex: 2; }
     .footer__actions {
       max-height: 200px; }
+      .documentation .footer__actions {
+        max-height: 100px; }
       .ecosystem .footer__actions {
         max-height: 125px; } }
 
