@@ -458,7 +458,8 @@ h4 {
 
 p, ul {
   font-size: 1.2rem;
-  line-height: 1.7rem; }
+  line-height: 1.7rem;
+  margin: 0.375rem 0; }
 
 pre {
   text-align: left; }
@@ -842,10 +843,18 @@ img, svg {
     max-width: 350px;
     margin-right: 2rem; }
   .hero__copy {
-    max-width: 675px;
+    max-width: 600px;
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1; }
+    .hero__copy h2 {
+      font-family: 'bariolthin';
+      font-weight: 600;
+      display: inline-block;
+      border-top: 1px solid rgba(255, 255, 255, 0.25);
+      padding-top: 35px;
+      margin-top: 25px;
+      font-size: 1.74rem; }
     .hero__copy a {
       text-decoration: underline;
       font-size: 1.3rem; }
@@ -951,7 +960,7 @@ img, svg {
       display: block; }
 
 .window {
-  margin: 1.5rem;
+  margin: 2.5rem;
   background: #26324c;
   border: 1px solid #37486e;
   border-radius: 7px;

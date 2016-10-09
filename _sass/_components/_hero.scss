@@ -35,8 +35,18 @@ $hero-height: 90vh;
   }
 
   &__copy {
-    max-width: 675px;
+    max-width: 600px;
     flex: 1;
+
+    h2 {
+      font-family: 'bariolthin';
+      font-weight: 600;
+      display: inline-block;
+      border-top: 1px solid rgba(white, 0.25);
+      padding-top: 35px;
+      margin-top: 25px;
+      font-size: 1.74rem;
+    }
 
     a {
       text-decoration: underline;
