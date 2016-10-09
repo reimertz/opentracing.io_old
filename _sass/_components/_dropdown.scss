@@ -36,8 +36,8 @@ $list-padding: 10px;
 
 
     &.mobile {
-      width: calc(100% - #{$header-padding * 2});
-      right: inherit;
+      left: 0;
+      right: 0;
       pointer-events: all;
 
       h3 {
