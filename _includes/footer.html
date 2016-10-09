@@ -3,23 +3,11 @@
     <div class="footer__section documentation">
       <h4 class="footer__subtitle">Documentation</h4>
       <div class="footer__actions">
-      <a href="{{site.url}}/documentation">Overview</a>
-      <a href="{{site.url}}/documentation/pages/quick-start">Quickstart</a>
-      <a href="{{site.url}}/documentation/pages/api/">API</a>
-      <a href="{{site.url}}/documentation/pages/instrumentation">Instrumentation</a>
-      <a href="{{site.url}}/documentation/pages/concepts-and-terminology">Concepts and Terminology</a>
-
-        <!-- yep, I had to do this to make documentation links non-static. jekyll 4.0 will solve this
-          {% for file in site.static_files %}
-            {% if file.extname == '.html' %}
-              {% if file.path contains '/documentation/pages/' %}
-                {% assign url = file.path %}
-                {% assign name = file.path | remove: file.extname | remove: '/documentation/pages/' | replace: '-', ' ' %}
-                  <a href="{{site.url}}/{{url}}">{{name}}</a>
-              {% endif %}
-            {% endif %}
-          {% endfor %}
-        -->
+        <a href="{{site.url}}/documentation">Overview</a>
+        <a href="{{site.url}}/documentation/pages/quick-start">Quickstart</a>
+        <a href="{{site.url}}/documentation/pages/api/">API</a>
+        <a href="{{site.url}}/documentation/pages/instrumentation">Instrumentation</a>
+        <a href="{{site.url}}/documentation/pages/concepts-and-terminology">Concepts and Terminology</a>
       </div>
     </div>
 
