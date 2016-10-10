@@ -5,7 +5,7 @@
 
 # The OpenTracing Project
 
-Consistent, expressive, vendor-neutral APIs for distributed tracing and context propagation
+Consistent, expressive, vendor-neutral APIs for distributed tracing and context propagation.
 
 ## Why Tracing?
 
