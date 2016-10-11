@@ -9,5 +9,5 @@
   * [Common Use Cases](pages/instrumentation/common-use-cases.md)
   * [Instrumenting Frameworks](pages/instrumentation/instrumenting-frameworks.md)
 * [Concepts and Terminology](pages/concepts-and-terminology.md)
-* [Authors and Contributors](pages/authors-and-contributors.md)
 * [Supported Tracers](pages/supported-tracer.md)
+* [Authors and Contributors](pages/authors-and-contributors.md)
