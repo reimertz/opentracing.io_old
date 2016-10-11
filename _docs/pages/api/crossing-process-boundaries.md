@@ -1,4 +1,4 @@
-# Everything You Wanted to Know About Inject and Extract but were Afraid to Ask
+# Crossing process boundaries
 
 Programmers adding tracing support across process boundaries must understand the `Tracer.Inject(...)` and `Tracer.Extract(...)` capabilities of [the OpenTracing specification](/spec). They are conceptually powerful, allowing the programmer to write *correct* and *general* cross-process propagation code **without being bound to a particular OpenTracing implementation**; that said, with great power comes great opportunity for confusion. :)
 
